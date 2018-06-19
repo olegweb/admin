@@ -169,6 +169,10 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
    * @returns {Object}
    */
   const convertReactAdminRequestToHydraRequest = (type, resource, params) => {
+    const {url = `${entrypoint}/${resource}`} = params.id
+      ? {url: params.id}
+      : resources.find(({name}) => resource === name) || {};
+
     switch (type) {
       case CREATE:
         return transformReactAdminDataToRequestBody(resource, params.data).then(
@@ -186,7 +190,7 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
           options: {
             method: 'DELETE',
           },
-          url: entrypoint + params.id,
+          url: `${url}`,
         });
 
       case GET_LIST: {
@@ -218,7 +222,7 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
       case GET_ONE:
         return Promise.resolve({
           options: {},
-          url: entrypoint + params.id,
+          url: `${url}`,
         });
 
       case UPDATE:
@@ -228,7 +232,7 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
               body,
               method: 'PUT',
             },
-            url: entrypoint + params.id,
+            url: `${url}`,
           }),
         );
 

@@ -1,6 +1,6 @@
 {
-  "name": "@api-platform/admin",
-  "version": "0.4.2",
+  "name": "olegweb-api-platform-admin",
+  "version": "0.1.0",
   "description": "Automatic administration interface for Hydra-enabled APIs.",
   "files": [
     "*.md",
@@ -9,10 +9,10 @@
     "src"
   ],
   "main": "lib/index",
-  "repository": "api-platform/admin",
-  "homepage": "https://github.com/api-platform/admin",
-  "bugs": "https://github.com/api-platform/admin/issues",
-  "author": "Kévin Dunglas",
+  "repository": "olegweb/api-platform-admin",
+  "homepage": "https://github.com/olegweb/api-platform-admin",
+  "bugs": "https://github.com/olegweb/api-platform-admin/issues",
+  "author": "olegweb",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.0",
