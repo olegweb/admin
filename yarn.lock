@@ -3861,9 +3861,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.5.2:
-  version "1.13.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.4.tgz#31bbae6990f13b1093187c731766a14036fa72e6"
+prettier@^1.13.5:
+  version "1.13.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.5.tgz#7ae2076998c8edce79d63834e9b7b09fead6bfd0"
 
 pretty-format@^20.0.3:
   version "20.0.3"
@@ -3926,9 +3926,9 @@ query-string@~5.1.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-ra-core@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-2.0.2.tgz#52a33b3aae66eecf3e4d39b62ee4d5d5fc4d8233"
+ra-core@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-2.0.3.tgz#3f27924deed50e9d5a70c8749796468f1df16b30"
   dependencies:
     babel-runtime "~6.26.0"
     classnames "~2.2.5"
@@ -3953,9 +3953,9 @@ ra-language-english@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-2.0.2.tgz#121bd8c358af7f74dc7a8bff4f4860aaec150a3b"
 
-ra-ui-materialui@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-2.0.2.tgz#b3fe284361a47acc696aa1e1f6f9ba04c4380cd7"
+ra-ui-materialui@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-2.0.3.tgz#497db6a103ae8334e62e8a605d0a7197da48b047"
   dependencies:
     "@material-ui/core" "~1.0.0"
     "@material-ui/icons" "~1.0.0"
@@ -3964,7 +3964,7 @@ ra-ui-materialui@^2.0.2:
     inflection "~1.12.0"
     lodash "~4.17.5"
     prop-types "~15.6.1"
-    ra-core "^2.0.2"
+    ra-core "^2.0.3"
     react-autosuggest "^9.3.2"
     react-dropzone "~4.0.1"
     react-redux "~5.0.7"
@@ -4003,13 +4003,13 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-admin@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-2.0.2.tgz#036e54a5be5df8f89fb321d0d99dd127edd9250c"
+react-admin@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-2.0.3.tgz#e28915785e6fd08c24ebec3eba15ebb9f4120dbb"
   dependencies:
-    ra-core "^2.0.2"
+    ra-core "^2.0.3"
     ra-language-english "^2.0.2"
-    ra-ui-materialui "^2.0.2"
+    ra-ui-materialui "^2.0.3"
 
 react-autosuggest@^9.3.2:
   version "9.3.4"
