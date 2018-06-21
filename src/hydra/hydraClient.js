@@ -11,7 +11,7 @@ import {
 import isPlainObject from 'lodash.isplainobject';
 import qs from 'qs';
 import fetchHydra from './fetchHydra';
-import {Url} from 'url';
+import Url from 'url';
 
 class ReactAdminDocument {
   constructor(obj) {
@@ -172,12 +172,17 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
   const convertReactAdminRequestToHydraRequest = (type, resource, params) => {
     const {url: tempUrl = `${entrypoint}/${resource}`} =
       resources.find(({name}) => resource === name) || {};
-    const objectUrl = new Url(tempUrl);
+    const objectUrl = Url.parse(tempUrl);
 
     let url = '';
 
     if (objectUrl.protocol) {
-      url = params.id ? `${objectUrl.origin}${params.id}` : tempUrl;
+      let origin = Url.format(
+        (({protocol, hostname, port}) => ({protocol, hostname, port}))(
+          objectUrl,
+        ),
+      );
+      url = params.id ? `${origin}${params.id}` : tempUrl;
     } else {
       url = params.id ? params.id : tempUrl;
     }
