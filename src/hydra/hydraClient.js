@@ -11,7 +11,7 @@ import {
 import isPlainObject from 'lodash.isplainobject';
 import qs from 'qs';
 import fetchHydra from './fetchHydra';
-import {URL} from 'whatwg-url';
+import {URL} from 'url';
 
 class ReactAdminDocument {
   constructor(obj) {
