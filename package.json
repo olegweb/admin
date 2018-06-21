@@ -1,6 +1,6 @@
 {
   "name": "olegweb-api-platform-admin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Automatic administration interface for Hydra-enabled APIs.",
   "files": [
     "*.md",
@@ -47,7 +47,7 @@
     "prop-types": "^15.5.7",
     "qs": "^6.5.1",
     "react-admin": "^2.0.3",
-      "whatwg-url": "latest"
+    "whatwg-url": "latest"
   },
   "peerDependencies": {
     "react": "~16.0.0 || ~16.1.0 || ~16.2.0 || ~16.3.0",
