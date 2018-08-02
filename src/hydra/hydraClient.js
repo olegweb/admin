@@ -127,7 +127,7 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
         return;
       }
 
-      fieldData[name] = normalizeData(data[name]);
+      fieldData[name] = normalizeData(data[name], data);
     });
 
     const fieldDataKeys = Object.keys(fieldData);
@@ -273,7 +273,7 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
         return;
       }
 
-      fieldData[name] = denormalizeData(data[name]);
+      fieldData[name] = denormalizeData(data[name], data);
     });
 
     const fieldDataKeys = Object.keys(fieldData);
@@ -320,7 +320,7 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
           .then(data => ({data, total: response.json['hydra:totalItems']}));
 
       case DELETE:
-        return Promise.resolve(() => ({data: {}}));
+        return Promise.resolve({data: {}});
 
       default:
         return Promise.resolve(
