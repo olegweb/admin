@@ -300,6 +300,7 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
     type,
     resource,
     response,
+    params,
   ) => {
     switch (type) {
       case GET_LIST:
@@ -320,7 +321,7 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
           .then(data => ({data, total: response.json['hydra:totalItems']}));
 
       case DELETE:
-        return Promise.resolve({data: {}});
+        return Promise.resolve({data: params});
 
       default:
         return Promise.resolve(
@@ -354,13 +355,13 @@ export default ({entrypoint, resources = []}, httpClient = fetchHydra) => {
       case DELETE_MANY:
         return Promise.all(
           params.ids.map(id => fetchApi(DELETE, resource, {id})),
-        ).then(responses => ({data: {}}));
+        ).then(responses => ({data: params.ids}));
 
       default:
         return convertReactAdminRequestToHydraRequest(type, resource, params)
           .then(({url, options}) => httpClient(url, options))
           .then(response =>
-            convertHydraResponseToReactAdminResponse(type, resource, response),
+            convertHydraResponseToReactAdminResponse(type, resource, response, params),
           );
     }
   };
